@@ -1,0 +1,13 @@
+services:
+  learn_threejs_web:
+    container_name: learn_threejs_web
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - "3000:3000"
+    env_file:
+      - ".env"
+    volumes:
+      - .:/usr/app
+      - /usr/app/node_modules
